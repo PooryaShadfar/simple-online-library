@@ -1,6 +1,6 @@
  <html>  
       <head>  
-           <title>My Live GridView</title>  
+           <title>My online library</title>  
            <link rel="stylesheet" href="apperance/bootstrap.min.css" />  
            <script src="apperance/bootstrap.min.js"></script>  
            <script src="apperance/jquery.min.js"></script>  
@@ -194,7 +194,7 @@
       });   
       $(document).on('click', '.createlink', function(){ 
             $.get('create.php', function(data) {
-                alert("my msg": " + data);
+                alert("my export msg : " + data);
             });
             return false;
       }); 
