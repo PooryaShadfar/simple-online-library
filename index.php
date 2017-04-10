@@ -1,6 +1,6 @@
  <html>  
       <head>  
-           <title>My Live GridView</title>  
+           <title>Simple Online Library</title>  
            <link rel="stylesheet" href="apperance/bootstrap.min.css" />  
            <script src="apperance/bootstrap.min.js"></script>  
            <script src="apperance/jquery.min.js"></script>  
@@ -11,7 +11,7 @@
                 <br />  
                 <br />  
                 <div class="table-responsive">  
-                     <h3 align="center">پــــروژه طـــــــــراحی وبــــ</h3><br />  
+                     <h3 align="center">Simple Online Library</h3><br />  
 			    <div class="form-group">  
                      <div class="input-group">  
                           <span class="input-group-addon">جستجو...</span>  
