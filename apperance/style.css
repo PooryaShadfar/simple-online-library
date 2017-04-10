@@ -1,0 +1,23 @@
+@font-face {
+font-family: 'IRANSansWeb';
+src: url('fonts/IRANSansWeb.eot?#') format('eot'),  /* IE6–8 */
+url('fonts/IRANSansWeb.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+url('fonts/IRANSansWeb.ttf') format('truetype');  /* Saf3—5, Chrome4+, FF3.5, Opera 10+ */}
+body{    font-family: iransansweb;  direction: rtl;}
+h3{  font-size: 40px;font-weight: bold;}
+a {color:#fff;}
+a:hover{color: #e1e1e1;text-decoration: none;}
+.table-bordered{    text-align: center;}
+th {text-align: right;}
+.btn{font-weight: bold;}
+.table tr:first-child {background: #ff2828;color: #fff;border-bottom: 2px solid #fff;box-shadow: inset 0px 0px 45px 0px rgba(0, 0, 0, 0.38);text-shadow: 0px 0px 3px #7b7b7b;}
+.add-data{    background-color: #f0f0f0;}
+.input-group-addon{    border-top-right-radius: 4px !important;
+    border-bottom-right-radius: 4px !important;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;}
+.input-group .form-control{    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;}
+.pagination_link{cursor:pointer; padding:6px; border:1px solid #ccc;}	
+.createlink{color:#8000ff;}
+.createlink:hover{color:#8000ff;}

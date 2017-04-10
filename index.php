@@ -1,6 +1,6 @@
  <html>  
       <head>  
-           <title>My online library</title>  
+           <title>My Live GridView</title>  
            <link rel="stylesheet" href="apperance/bootstrap.min.css" />  
            <script src="apperance/bootstrap.min.js"></script>  
            <script src="apperance/jquery.min.js"></script>  
@@ -11,11 +11,11 @@
                 <br />  
                 <br />  
                 <div class="table-responsive">  
-                     <h3 align="center">simple online library</h3><br />  
+                     <h3 align="center">پــــروژه طـــــــــراحی وبــــ</h3><br />  
 			    <div class="form-group">  
                      <div class="input-group">  
-                          <span class="input-group-addon">search...</span>  
-                          <input type="text" name="search_text" id="search_text" placeholder="search by name" class="form-control" />  
+                          <span class="input-group-addon">جستجو...</span>  
+                          <input type="text" name="search_text" id="search_text" placeholder="جستجو بر اساس نام" class="form-control" />  
                      </div>  
                 </div>  
                 <br/>
@@ -39,23 +39,23 @@
       }  
       fetch_data();  
       $(document).on('click', '#btn_add', function(){  
-           var bookname = $('#ibookname').text();  
-           var bookdate = $('#ibookdate').text();  
-		   var age = $('#author').text();  
+           var name = $('#iname').text();  
+           var lastname = $('#ilastname').text();  
+		   var age = $('#iage').text();  
 		   var image_name = $('#images').val();  
            if(name == '')  
            {  
-                alert("enter the book name first");  
+                alert("نام را وارد کنيد");  
                 return false;  
            }  
            if(lastname == '')  
            {  
-                alert("enter the book date first");  
+                alert("نام خانوادگي را وارد کنيد");  
                 return false;  
            }  
 		   if(age == '')  
            {  
-                alert("enter the book author first");  
+                alert("سن را وارد کنيد");  
                 return false;  
            }  
            if(image_name == '')  
@@ -77,7 +77,7 @@
            $.ajax({  
                 url:"insert.php",  
                 method:"POST",  
-                data:{bookname:bookname, bookdate:bookdate, author:author},  
+                data:{name:name, lastname:lastname, age:age},  
                 dataType:"text",  
                 success:function(data)  
                 {  
@@ -194,12 +194,19 @@
       });   
       $(document).on('click', '.createlink', function(){ 
             $.get('create.php', function(data) {
-                alert("my export msg : " + data);
+                alert("پیغام بازگشتی: " + data);
             });
             return false;
       }); 
 	  
-	 
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+
 
 }); 			
  </script>  
