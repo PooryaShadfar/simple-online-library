@@ -14,8 +14,8 @@
                      <h3 align="center">Simple Online Library</h3><br />  
 			    <div class="form-group">  
                      <div class="input-group">  
-                          <span class="input-group-addon">جستجو...</span>  
-                          <input type="text" name="search_text" id="search_text" placeholder="جستجو بر اساس نام" class="form-control" />  
+                          <span class="input-group-addon">Search ...</span>  
+                          <input type="text" name="search_text" id="search_text" placeholder="Search By Name" class="form-control" />  
                      </div>  
                 </div>  
                 <br/>
@@ -39,23 +39,23 @@
       }  
       fetch_data();  
       $(document).on('click', '#btn_add', function(){  
-           var name = $('#iname').text();  
-           var lastname = $('#ilastname').text();  
-		   var age = $('#iage').text();  
+           var bookname = $('#ibookname').text();  
+           var bookdate = $('#ibookdate').text();  
+		   var author = $('#iauthor').text();  
 		   var image_name = $('#images').val();  
            if(name == '')  
            {  
-                alert("نام را وارد کنيد");  
+                alert("input book name first please");  
                 return false;  
            }  
            if(lastname == '')  
            {  
-                alert("نام خانوادگي را وارد کنيد");  
+                alert("input book date first please");  
                 return false;  
            }  
 		   if(age == '')  
            {  
-                alert("سن را وارد کنيد");  
+                alert("input author name first please");  
                 return false;  
            }  
            if(image_name == '')  
@@ -77,7 +77,7 @@
            $.ajax({  
                 url:"insert.php",  
                 method:"POST",  
-                data:{name:name, lastname:lastname, age:age},  
+                data:{bookname:bookname, bookdate:bookdate, author:author},  
                 dataType:"text",  
                 success:function(data)  
                 {  
@@ -99,20 +99,20 @@
                 }  
            });  
       }  
-      $(document).on('blur', '.name', function(){  
+      $(document).on('blur', '.bookname', function(){  
            var id = $(this).data("id1");  
-           var name = $(this).text();  
-           edit_data(id, name, "name");  
+           var bookname = $(this).text();  
+           edit_data(id, bookname, "bookname");  
       });  
-      $(document).on('blur', '.lastname', function(){  
+      $(document).on('blur', '.bookdate', function(){  
            var id = $(this).data("id2");  
-           var lastname = $(this).text();  
-           edit_data(id,lastname, "lastname");  
+           var bookdate = $(this).text();  
+           edit_data(id,bookdate, "bookdate");  
       });  
-	  $(document).on('blur', '.age', function(){  
+	  $(document).on('blur', '.author', function(){  
            var id = $(this).data("id2");  
-           var age = $(this).text();  
-           edit_data(id,age, "age");  
+           var author = $(this).text();  
+           edit_data(id,author, "author");  
       }); 
       $(document).on('click', '.btn_delete', function(){  
            var id=$(this).data("id3");  
@@ -194,7 +194,7 @@
       });   
       $(document).on('click', '.createlink', function(){ 
             $.get('create.php', function(data) {
-                alert("پیغام بازگشتی: " + data);
+                alert("message : " + data);
             });
             return false;
       }); 
