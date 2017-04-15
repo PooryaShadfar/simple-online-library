@@ -1,7 +1,4 @@
  <?php  
- $dir = "uploads/";
- move_uploaded_file($_FILES["image"]["tmp_name"], $dir. $_FILES["image"]["name"]);
- require_once("db.php");
  //$file = addslashes($_POST["image_name"]);  
  $file = $_POST["image"];
  $file = str_replace( "\\", '/', $file );
