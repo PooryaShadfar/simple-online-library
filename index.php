@@ -1,6 +1,6 @@
  <html>  
       <head>  
-           <title>Simple Online Library</title>  
+           <title>Online Library CMS</title>  
            <link rel="stylesheet" href="apperance/bootstrap.min.css" />  
            <script src="apperance/bootstrap.min.js"></script>  
            <script src="apperance/jquery.min.js"></script>  
@@ -11,11 +11,11 @@
                 <br />  
                 <br />  
                 <div class="table-responsive">  
-                     <h3 align="center">Simple Online Library</h3><br />  
+                     <h3 align="center">Admin Area</h3><br />  
 			    <div class="form-group">  
                      <div class="input-group">  
-                          <span class="input-group-addon">Search ...</span>  
-                          <input type="text" name="search_text" id="search_text" placeholder="Search By Name" class="form-control" />  
+                          <span class="input-group-addon">Search...</span>  
+                          <input type="text" name="search_text" id="search_text" placeholder="Search by bookname!" class="form-control" />  
                      </div>  
                 </div>  
                 <br/>
@@ -27,6 +27,7 @@
  </html>  
  <script>   
  $(document).ready(function(){  
+}); 
       function fetch_data()  
       {  
            $.ajax({  
@@ -40,48 +41,37 @@
       fetch_data();  
       $(document).on('click', '#btn_add', function(){  
            var bookname = $('#ibookname').text();  
-           var bookdate = $('#ibookdate').text();  
-		   var author = $('#iauthor').text();  
-		   var image_name = $('#images').val();  
-           if(name == '')  
+           var bookauthor = $('#ibookauthor').text();  
+		   var bookpages = $('#ibookpages').text();  
+		   var image = $('#file').val();  
+           if(bookname == '')  
            {  
-                alert("input book name first please");  
+                alert("input book name please!");  
                 return false;  
            }  
-           if(lastname == '')  
+           if(bookauthor == '')  
            {  
-                alert("input book date first please");  
+                alert("input book author please!");  
                 return false;  
            }  
-		   if(age == '')  
+		   if(bookpages == '')  
            {  
-                alert("input author name first please");  
+                alert("input book page numbers please!");  
                 return false;  
            }  
-           if(image_name == '')  
+		    if(image == '')  
            {  
-                alert("Please Select Image");  
+                alert("input book cover please!");  
                 return false;  
            }  
-           else  
-           {  
-                var extension = $('#images').val().split('.').pop().toLowerCase();  
-                if(jQuery.inArray(extension, ['gif','png','jpg','jpeg']) == -1)  
-                {  
-                     alert('Invalid Image File');  
-                     $('#images').val('');  
-                     return false;  
-                }  
-           }  
-
            $.ajax({  
                 url:"insert.php",  
                 method:"POST",  
-                data:{bookname:bookname, bookdate:bookdate, author:author},  
-                dataType:"text",  
+                data:{bookname:bookname, bookauthor:bookauthor, bookpages:bookpages, image:image},  
+                //dataType:"text",
                 success:function(data)  
                 {  
-                     alert(data);  
+                     //alert(data);  
                      fetch_data();  
                 }  
            })  
@@ -95,7 +85,7 @@
                 data:{id:id, text:text, column_name:column_name},  
                 dataType:"text",  
                 success:function(data){  
-                     alert(data);  
+                     //alert(data);  
                 }  
            });  
       }  
@@ -104,15 +94,15 @@
            var bookname = $(this).text();  
            edit_data(id, bookname, "bookname");  
       });  
-      $(document).on('blur', '.bookdate', function(){  
+      $(document).on('blur', '.bookauthor', function(){  
            var id = $(this).data("id2");  
-           var bookdate = $(this).text();  
-           edit_data(id,bookdate, "bookdate");  
+           var bookauthor = $(this).text();  
+           edit_data(id,bookauthor, "bookauthor");  
       });  
-	  $(document).on('blur', '.author', function(){  
+	  $(document).on('blur', '.bookpages', function(){  
            var id = $(this).data("id2");  
-           var author = $(this).text();  
-           edit_data(id,author, "author");  
+           var bookpages = $(this).text();  
+           edit_data(id,bookpages, "bookpages");  
       }); 
       $(document).on('click', '.btn_delete', function(){  
            var id=$(this).data("id3");  
@@ -123,7 +113,7 @@
                      data:{id:id},  
                      dataType:"text",  
                      success:function(data){  
-                          alert(data);  
+                          //alert(data);  
                           fetch_data();  
                      }  
                 });  
@@ -194,19 +184,10 @@
       });   
       $(document).on('click', '.createlink', function(){ 
             $.get('create.php', function(data) {
-                alert("message : " + data);
+                alert("پیغام بازگشتی: " + data);
             });
             return false;
       }); 
 	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-
-
-}); 			
+			
  </script>  
