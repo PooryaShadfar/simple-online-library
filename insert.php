@@ -1,10 +1,14 @@
  <?php  
-require_once("db.php");
-$file = addslashes(file_get_contents($_FILES["images"]["tmp_name"]));
-var_dump($file);
- $sql = "INSERT INTO test1(bookname, bookdate, author , images) VALUES('".$_POST["bookname"]."', '".$_POST["bookdate"]."', '".$_POST["author"]."', '".$file."')";  
+ $dir = "uploads/";
+ move_uploaded_file($_FILES["image"]["tmp_name"], $dir. $_FILES["image"]["name"]);
+ require_once("db.php");
+ //$file = addslashes($_POST["image_name"]);  
+ $file = $_POST["image"];
+ $file = str_replace( "\\", '/', $file );
+ $files =  basename( $file );
+ $sql = "INSERT INTO test1(bookname, bookauthor, bookpages , images) VALUES('".$_POST["bookname"]."', '".$_POST["bookauthor"]."', '".$_POST["bookpages"]."', '".$files."')";  
  if(mysqli_query($connect, $sql))  
  {   
-      echo 'datas inputs';  
+      echo 'datas created!';  
  }  
  ?> 
