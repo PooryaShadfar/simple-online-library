@@ -13,19 +13,12 @@ error_reporting(0);
       $page = 1;  
  }  
  
- //$msg = "";
- //if(isset($_POST['btn_add'])) {
- //$target = "upload/".basename($_FILES['image']['name']);
- //$image = $FILES['image']['name'];
- //$sql = "INSERT INTO test1 (images) VALUES ('$image')";
- //mysqli_query($connect, $sql); 
- //if(move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
- //$msg = "1";
- //}else{
- //$msg = "2";
- //}
- //}
- //echo $msg;
+if (isset($_POST['btn_add'])) {
+$target = "images/".basename($_FILES['image']['name']);
+if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
+$msg = "t1";
+}
+}
  
 if(isset($_POST["search"])){$search = $_POST["search"];}else{$search=NULL;}
 if(isset($_POST["column_name"])){$column_name = $_POST["column_name"];}else{$column_name="id";}
@@ -41,7 +34,7 @@ if(isset($_POST["order"])){$order = $_POST["order"];}else{$order=NULL;}
  $start_from = ($page - 1)*$record_per_page;  
  $query = "SELECT * FROM test1 WHERE bookname LIKE '%".$search."%' ORDER BY ".$column_name." ".$order." LIMIT $start_from, $record_per_page"; 
  $result = mysqli_query($connect, $query);  
- $output .= '<form id="upload_form" enctype="multipart/form-data" method="post">
+ $output .= '
  <div class="table-responsive" id="users_table">  
  <table class="table table-bordered">  
       <tr>  
@@ -49,22 +42,25 @@ if(isset($_POST["order"])){$order = $_POST["order"];}else{$order=NULL;}
            <th width="15%"><a class="column_sort" id="bookname" data-order="'.$order.'" href="#">bookname</a></th>  
            <th width="15%"><a class="column_sort" id="bookauthor" data-order="'.$order.'" href="#">bookauthor</a></th>  
            <th  width="2%"><a class="column_sort" id="bookpages" data-order="'.$order.'" href="#">bookpages</a></th>  
-		   <th  width="15%"><a class="column_sort" id="images" href="#">bookimage</a></th>  
+		   <th  width="10%"><a class="column_sort" id="images" href="#">bookimage</a></th>  
            <th width="2%">Delete</th>  		   
       </tr>';   
  if(mysqli_num_rows($result) > 0)  
  {  
        $output .= '
+	   <form method="post" action="index.php" enctype="multipart/form-data">			
            <tr class="add-data">  
                 <td></td>  
                 <td id="ibookname" contenteditable ></td>  
                 <td id="ibookauthor" contenteditable></td>  
-			    <td id="ibookpages" contenteditable></td>  
+			    <td id="ibookpages" contenteditable></td>
 			    <td id="iimage">   
+				<input type="hidden" name="size" value="1000000">
                 <input type="file" name="image" id="file" />  
                 </td>
-                <td><button onclick="uploadFile();" type="button" name="btn_add" id="btn_add" class="btn btn-xs btn-success">+</button></td>  
+                <td><button type="button" name="btn_add" id="btn_add" class="btn btn-xs btn-success">+</button></td>  
            </tr>
+		</form>   
 		   
       '; 
       while($row = mysqli_fetch_array($result))  
@@ -74,8 +70,8 @@ if(isset($_POST["order"])){$order = $_POST["order"];}else{$order=NULL;}
                      <td>'.$row["id"].'</td>  
                      <td class="bookname" data-id1="'.$row["id"].'" contenteditable>'.$row["bookname"].'</td>  
                      <td class="bookauthor" data-id2="'.$row["id"].'" contenteditable>'.$row["bookauthor"].'</td>  
-					 <td class="bookpages" data-id2="'.$row["id"].'" contenteditable>'.$row["bookpages"].'</td>  
-					 <td class="images" data-id2="'.$row["id"].'" contenteditable>'.$row["images"].'</td>  
+					 <td class="bookpages" data-id2="'.$row["id"].'" contenteditable>'.$row["bookpages"].'</td> 
+					 <td class="images" data-id2="'.$row["id"].'" contenteditable><img src="images/'.$row["images"].'"></td>  
                      <td><button type="button" name="delete_btn" data-id3="'.$row["id"].'" class="btn btn-xs btn-danger btn_delete">x</button></td>  
                 </tr>  
            ';  
@@ -94,6 +90,6 @@ $output .='</tr></table><div align="center">';
  {  
       $output .= "<span class='pagination_link' id='".$i."'>".$i."</span>";  
  }  
- $output .= '</div><br/></form>';  
+ $output .= '</div><br/>';  
  echo $output;  
  ?>  
