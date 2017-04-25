@@ -19,7 +19,7 @@ $_SESSION["logged_in"] = 1;
 header("Location: admin.php");
 exit();
 }else {
-echo "<p style='text-align:center;margin-top:15px;'>نام کاربری و یا گذرواژه اشتباه است! </p>";
+echo "<p style='text-align:center;margin-top:15px;'> Your User Name Or Password Is Wrong </p>";
 
 }
 }
