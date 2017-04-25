@@ -1,0 +1,85 @@
+@font-face {
+font-family: 'IRANSansWeb';
+src: url('../fonts/IRANSansWeb.eot?#') format('eot'),  /* IE6–8 */
+url('../fonts/IRANSansWeb.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+url('../fonts/IRANSansWeb.ttf') format('truetype');  /* Saf3—5, Chrome4+, FF3.5, Opera 10+ */}
+body{    font-family: iransansweb;  direction: rtl;background-color: #f2f2f2;}
+h3{  font-size: 40px;font-weight: bold;}
+a {color:#fff;}
+a:hover{color: #e1e1e1;text-decoration: none;}
+.table-bordered{    text-align: center;}
+th {text-align: right;}
+.btn{font-weight: bold;}
+.table tr:first-child {background: #313131;color: #fff;border-bottom: 4px solid  #17bce8;text-shadow: 0px 0px 3px #000000;}
+.table-bordered>tbody>tr>th{text-align: center;padding: 14px;text-transform: capitalize;}	
+.add-data{background-color: #f0f0f0;}
+.input-group-addon{ border-top-right-radius: 4px !important; border-bottom-right-radius: 4px !important;border-top-left-radius: 0px; border-bottom-left-radius: 0px;}
+.input-group .form-control{ border-top-right-radius: 0px;border-bottom-right-radius: 0px;}
+.pagination_link{cursor:pointer; padding:6px; border:1px solid #ccc;}	
+.createlink{color:#8000ff;}
+.createlink:hover{color:#8000ff;}
+.images img{width: 100px;height: 150px;}
+#loginCase{}
+.log{ margin: 0 auto;width: 30em;}
+.rememberme{ margin-right: 8em;}
+.label{direction: rtl;}
+.logout{ position: absolute;left: 0;margin: 10px;z-index: 1;}
+.col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9{float:right;}
+#gallery img{width: 165px; height: 235px;}
+.logo{width: 150px;}	
+#contet{margin: 20px auto;}
+.send-stuff{height: 30em;margin-left: 32px;width: 28%;}
+.col-xs-9{margin-bottom: 20px;}
+
+#header-wrapper{background-color: #0c0c0c;margin-bottom: 25px; height: 150px;}
+#header{width: 100%;margin: 0 auto;position: relative;z-index: 2; background-color: #1a1a1a;height: 100px;}
+#head-stuff{width: 1170px; margin: 0 auto;}
+#logo{float: right; width: 95px;height: 95px;margin-top: 5px;}
+#logo img{ width: 90px;height: 90px;}
+.container{}
+.navbar{background: #17BCE8!important;background: #17BCE8!important;border: none !important;border-radius: 0px !important;}
+.container-fluid{}
+.navbar-header{}
+.collapse .navbar-collapse{}
+.nav{    direction: rtl;    float: right;}
+.nav li{float: right;}
+.nav .active{padding: 15px;color: #fff !important;background-color: rgb(0, 172, 217) !important;}
+.navbar-default .navbar-nav>li>a{color: #fff;font-weight: 200;}
+#firstCase{}
+.sepratorContains{}
+.titlebar{padding: 10px; background-color: #17bce8;color: #FFF; border-radius: 10px; margin: 15px; text-shadow: 0px 0px 2px #000;}
+.boxWrapper {
+    background: #fff;
+    overflow: hidden;
+    margin: 5px;
+    padding: 0px;
+}
+.boxWrapper .thumb {
+    background-color: #000;
+}
+.imgcontainer {
+    overflow: hidden !important;
+    height: 310px;
+    position: relative !important;
+    background-size: cover !important;
+    display: block;
+    cursor: pointer;
+    background-position: center center !important;
+}
+.contents{ direction: rtl;    line-height: 10px;}
+.contents h2{text-align: center;font-size: 18px;}
+.contents a{color:#000;}
+.contents p { margin: 10px;}
+.txt{ margin-right: 5px;text-transform: capitalize;font-size: 13px; line-height: 0px;}
+.mojod ,.namojod{padding: 8px;color: #FFF;border-radius: 5px;}
+.namojod{background-color: #31c700;}
+.mojod{background-color: #cb0000;}
+#footer-wrapper{background-color: #1a1a1a;overflow: hidden;padding-bottom: 20px;border-bottom: 1px solid #000; height: 10em; border-top: 4px solid #17bce8;}
+#footer{  width: 100%;margin: 0 auto; padding-top: 3em;color: #FFF;background-color: #0c0c0c;}
+#footer-copy{width: 100%;height: 3em;padding: 5px;background-color: #0c0c0c;overflow: hidden;}
+.footer-bottom-sp {    color: #dddddd;}
+.modal-body .nav { width: 100%;padding: 0;margin-bottom: 10px;}
+.modal-body .nav .active {background: rgba(255, 255, 255, 0) !important;color: #000 !important;padding: 0px;}
+.modal-body .nav li{ background-color: #0c5e74;border-radius: 4px 4px 0 0;margin-right: 5px;}
+.nav>li>a:focus, .nav>li>a:hover{    background-color: #6a121c;}
+.nav-tabs>li>a:hover{border: 0;}
