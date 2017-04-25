@@ -9,23 +9,23 @@ echo "<li class='imgContainer img-responsive' style='background-image: url(ol-co
 echo "<a href='' rel='bookmark'></a></li></div><div class='contents'>";
 echo "<h2><a href=''>". $row['bookname'] ."</a></h2><div class='txt'>";
 echo "<hr>";
-echo "<label> زبان کتاب : &nbsp;</label>";
+echo "<label> Book Language : &nbsp;</label>";
 echo $row['booklng'];
 echo "<hr>";
-echo "<label> نویسنده : &nbsp;</label>";
+echo "<label> Author : &nbsp;</label>";
 echo $row['bookauthor'];
 echo "<hr>";
-echo "<label> مترجم : &nbsp;</label>";
+echo "<label> TranslatedBy : &nbsp;</label>";
 echo $row['booktrans'];
 echo "<hr>";
-echo "<label> ناشر : &nbsp;</label>";
+echo "<label> Publisher : &nbsp;</label>";
 echo $row['bookshop'];
 echo "<hr>";
-echo "<label> تاریخ انتشار : &nbsp;</label>";
+echo "<label> Relase Date : &nbsp;</label>";
 echo $row['reldate'];
 echo "<hr>";
-echo "<label> وضعیت : &nbsp;</label>";
-if ($row['reservation'] == 1){echo "<span class='mojod'>موجود</span>";}else{ echo "<span class='namojod'>ناموجود</span>"; }
+echo "<label> Status : &nbsp;</label>";
+if ($row['reservation'] == 1){echo "<span class='mojod'>Available</span>";}else{ echo "<span class='namojod'>unavailable</span>"; }
 echo "<hr>";
 echo "</div></div></div>";
  } ?>
