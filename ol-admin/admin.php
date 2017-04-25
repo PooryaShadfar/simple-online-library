@@ -17,7 +17,7 @@ if($_SESSION['logged_in'] == 1) {
       </head>  
 <body>  
 <a href="logout.php">
-<input type="submit" name="submit" value="Exit" class="pull-left btn btn-danger btn-sm logout">
+<input type="submit" name="submit" value="LogOut" class="pull-left btn btn-danger btn-sm logout">
 </a>
 <div class="admin-panel">
 
