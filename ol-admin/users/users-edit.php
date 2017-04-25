@@ -6,6 +6,6 @@ require_once("../../config.php");
  $sql = "UPDATE `ol-user` SET ".$column_name."='".$text."' WHERE id='".$id."'";  
  if(mysqli_query($connect, $sql))  
  {  
-      echo 'داده ها به روز رساني شدند';  
+      echo 'The data were successfully updated';  
  }  
  ?> 
