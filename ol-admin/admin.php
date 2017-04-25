@@ -23,21 +23,21 @@ if($_SESSION['logged_in'] == 1) {
 
     <div class="slidebar">
         <ul>
-            <li><a href="" name="tab1"><i class="fa fa-tachometer"></i>بخش عمومی</a></li>
-            <li><a href="" name="tab2"><i class="fa fa-pencil"></i>افزودن کتاب</a></li>
-			<li><a href="" name="tab3"><i class="fa fa-align-justify"></i> ویرایش</a></li>
-            <li><a href="" name="tab4"><i class="fa fa-picture-o"></i>گالری</a></li>
-			<li><a href="" name="tab5"><i class="fa fa-user-o"></i>کاربران</a></li>
+            <li><a href="" name="tab1"><i class="fa fa-tachometer"></i>Geeral</a></li>
+            <li><a href="" name="tab2"><i class="fa fa-pencil"></i>New Book</a></li>
+			<li><a href="" name="tab3"><i class="fa fa-align-justify"></i>Edit</a></li>
+            <li><a href="" name="tab4"><i class="fa fa-picture-o"></i>Gallery</a></li>
+			<li><a href="" name="tab5"><i class="fa fa-user-o"></i>Users</a></li>
            
         </ul>
     </div>
   
     <div class="main">
-         <div class="tabs" id="tab1"><h2 class="header">بخش عمومی</h2>  </div>
-         <div class="tabs" id="tab2"><h2 class="header">افزودن کتاب </h2><?php include('add/add-data.php'); ?></div>
-		 <div class="tabs" id="tab3"><h2 class="header">به روز رسانی ها</h2><?php include('edit/index.php'); ?></div> 
-         <div class="tabs" id="tab4"><h2 class="header">گالری کاور کتاب ها</h2><?php include('gallery/gallery.php'); ?></div>
-		 <div class="tabs" id="tab5"><h2 class="header">کاربران</h2><?php include('users/index.php'); ?></div>
+         <div class="tabs" id="tab1"><h2 class="header">Geeral</h2>  </div>
+         <div class="tabs" id="tab2"><h2 class="header">Add New Book</h2><?php include('add/add-data.php'); ?></div>
+		 <div class="tabs" id="tab3"><h2 class="header">Edit</h2><?php include('edit/index.php'); ?></div> 
+         <div class="tabs" id="tab4"><h2 class="header">Gallery</h2><?php include('gallery/gallery.php'); ?></div>
+		 <div class="tabs" id="tab5"><h2 class="header">Users</h2><?php include('users/index.php'); ?></div>
       
     </div>
   
