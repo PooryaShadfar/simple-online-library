@@ -78,7 +78,7 @@ $msg = "image uploaded failed";
 	 <label class="col-sm-2 control-label" for="formGroupInputSmall"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Book Publisher : </label>
   </div>
   
-    <div class="form-group form-group-sm"> 1395-02-13
+    <div class="form-group form-group-sm">
      <div class="col-xs-9">
        <input class="form-control" type="text" name="reldate" id="formGroupInputSmall" placeholder=" Write Book Relase Date Example (2000-02-03) :">
      </div>
