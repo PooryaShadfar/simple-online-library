@@ -34,9 +34,9 @@
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
-      <li class="active"><a href="index.php"><i class="fa fa-home"></i> صفحه اصلی </a></li>
-      <li><a href="#"  data-toggle="modal" data-target="#loglabel"> <i class="fa fa-sign-in"></i>ورود/عضویت</a></li>
-      <li><a href=""> <i class="fa fa-phone"></i> تماس با ما</a></li>
+      <li class="active"><a href="index.php"><i class="fa fa-home"></i> Home Page</a></li>
+      <li><a href="#"  data-toggle="modal" data-target="#loglabel"> <i class="fa fa-sign-in"></i>Login/Register</a></li>
+      <li><a href=""> <i class="fa fa-phone"></i> Call Us </a></li>
     </ul>
     </div>
   </div>
@@ -49,7 +49,7 @@
 <div class="modal-content">
 <div class="modal-header">
 <button type="button" class="close pull-left" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-<h4 class="modal-title" id="loglabel"> ورود و ثبت نام </h4></div>
+<h4 class="modal-title" id="loglabel"> Login And Register </h4></div>
 <div class="modal-body">
 <?php include_once('ol-admin/logform.php'); ?>
 </div>
