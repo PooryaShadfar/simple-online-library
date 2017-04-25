@@ -26,13 +26,13 @@ $msg = "image uploaded failed";
 <form method="post" action="admin.php" enctype="multipart/form-data">
    <input type="hidden" name="size" value="1000000">
    <div class="pull-left send-stuff">
-    <input type="submit"  class="btn btn-success btn-lg btn-block" name="upload" onClick="setTimeout('clearform()', 1500 );" value="انتشار">
+    <input type="submit"  class="btn btn-success btn-lg btn-block" name="upload" onClick="setTimeout('clearform()', 1500 );" value="Publish">
    <hr>
     <div class="form-group">
-    <label for="exampleInputFile">تصویر شاخص</label></br>
-	<input type="button" value="بارگزاری تصویر" class="btn btn-default pull-left" onclick="document.getElementById('file').click();" />
+    <label for="exampleInputFile">Image</label></br>
+	<input type="button" value="Choose Image" class="btn btn-default pull-left" onclick="document.getElementById('file').click();" />
      <input type="file" style="display:none;" id="file" name="image" >
-    <p class="help-block">تصویر کاور کتاب را اینجا آپلود کنید</p>
+    <p class="help-block">Pick Book Cover Image!</p>
     </div>
    </div>
    
@@ -40,63 +40,63 @@ $msg = "image uploaded failed";
  
   <div class="form-group form-group-sm">
      <div class="col-xs-9">
-       <input class="form-control" type="text" name="bookname" id="formGroupInputSmall" placeholder="نام کتاب را وارد نمایید.">
+       <input class="form-control" type="text" name="bookname" id="formGroupInputSmall" placeholder="Write Book Name">
      </div>
-	 <label class="col-sm-2 control-label" for="formGroupInputSmall"> <i class="fa fa-book" aria-hidden="true"></i> نام کتاب : </label>
+	 <label class="col-sm-2 control-label" for="formGroupInputSmall"> <i class="fa fa-book" aria-hidden="true"></i> Book Name : </label>
   </div>
   
     <div class="form-group form-group-sm">
      <div class="col-xs-9">   
   <select class="form-control" name="booklng" id="formGroupInputSmall">
-  <option>فارسی</option>
-  <option>انگلیسی</option>
-  <option>روسی</option>
-  <option>ایتالیای</option>
-  <option>فرانسوی</option>
+  <option>English</option>
+  <option>Persian</option>
+  <option>Russian</option>
+  <option>Italian</option>
+  <option>Frace</option>
   </select>
      </div>
-	 <label class="col-sm-2 control-label" for="formGroupInputSmall"> <i class="fa fa-language" aria-hidden="true"></i> زبان کتاب : </label>
+	 <label class="col-sm-2 control-label" for="formGroupInputSmall"> <i class="fa fa-language" aria-hidden="true"></i> Book Language : </label>
   </div>
     <div class="form-group form-group-sm">
      <div class="col-xs-9">
-       <input class="form-control" type="text" name="bookauthor" id="formGroupInputSmall" placeholder="نام نویسنده اصلی کتاب را وارد نمایید.">
+       <input class="form-control" type="text" name="bookauthor" id="formGroupInputSmall" placeholder="Write Book Author Name">
      </div>
-	 <label class="col-sm-2 control-label" for="formGroupInputSmall"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i> نویسنده کتاب : </label>
-  </div>
-  
-    <div class="form-group form-group-sm">
-     <div class="col-xs-9">
-       <input class="form-control" type="text" name="booktrans" id="formGroupInputSmall" placeholder="نام مترجم این کتاب را وارد نمایید.">
-     </div>
-	 <label class="col-sm-2 control-label" for="formGroupInputSmall"> <i class="fa fa-pencil-square" aria-hidden="true"></i> مترجم کتاب : </label>
+	 <label class="col-sm-2 control-label" for="formGroupInputSmall"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Book Author : </label>
   </div>
   
     <div class="form-group form-group-sm">
      <div class="col-xs-9">
-       <input class="form-control" type="text" name="bookshop" id="formGroupInputSmall" placeholder="نام ناشر کتاب را وارد نمایید.">
+       <input class="form-control" type="text" name="booktrans" id="formGroupInputSmall" placeholder="Write Book Translator Name">
      </div>
-	 <label class="col-sm-2 control-label" for="formGroupInputSmall"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> ناشر کتاب : </label>
+	 <label class="col-sm-2 control-label" for="formGroupInputSmall"> <i class="fa fa-pencil-square" aria-hidden="true"></i> Book Tanslator : </label>
   </div>
   
     <div class="form-group form-group-sm">
      <div class="col-xs-9">
-       <input class="form-control" type="text" name="reldate" id="formGroupInputSmall" placeholder="تاریخ چاپ را وارد نمایید،مثال : 1395-02-13">
+       <input class="form-control" type="text" name="bookshop" id="formGroupInputSmall" placeholder="Write Book Publisher Company">
      </div>
-	 <label class="col-sm-2 control-label" for="formGroupInputSmall"> <i class="fa fa-calendar" aria-hidden="true"></i> تاریخ چاپ : </label>
+	 <label class="col-sm-2 control-label" for="formGroupInputSmall"> <i class="fa fa-shopping-cart" aria-hidden="true"></i> Book Publisher : </label>
+  </div>
+  
+    <div class="form-group form-group-sm"> 1395-02-13
+     <div class="col-xs-9">
+       <input class="form-control" type="text" name="reldate" id="formGroupInputSmall" placeholder=" Write Book Relase Date Example (2000-02-03) :">
+     </div>
+	 <label class="col-sm-2 control-label" for="formGroupInputSmall"> <i class="fa fa-calendar" aria-hidden="true"></i> Book Relase Date : </label>
   </div>
   
     <div class="form-group form-group-sm">
      <div class="col-xs-9">
       <input type="checkbox" name="reservation" value="0" />
      </div>
-	 <label class="col-sm-2 control-label" for="formGroupInputSmall"> <i class="fa fa-check-square-o" aria-hidden="true"></i> وضعیت موجودی : </label>
+	 <label class="col-sm-2 control-label" for="formGroupInputSmall"> <i class="fa fa-check-square-o" aria-hidden="true"></i> Status : </label>
   </div>
   
     <div class="form-group form-group-sm">
      <div class="col-xs-9">
-	 <textarea class="form-control" name="extrainfo" id="formGroupInputSmall" style="max-width: 850px;" placeholder="توضیحی کوتاه در مورد این کتاب بنویسید..." rows="5"></textarea>
+	 <textarea class="form-control" name="extrainfo" id="formGroupInputSmall" style="max-width: 850px;" placeholder="Write Any Thing You Like About This Book" rows="5"></textarea>
      </div>
-	 <label class="col-sm-2 control-label" for="formGroupInputSmall"> <i class="fa fa-keyboard-o" aria-hidden="true"></i> یادداشت : </label>
+	 <label class="col-sm-2 control-label" for="formGroupInputSmall"> <i class="fa fa-keyboard-o" aria-hidden="true"></i> Extra Information : </label>
   </div>
  
 </div></div></section>	  
