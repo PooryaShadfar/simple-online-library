@@ -6,6 +6,6 @@ require_once("../../config.php");
  $sql = "UPDATE bookdetails SET ".$column_name."='".$text."' WHERE id='".$id."'";  
  if(mysqli_query($connect, $sql))  
  {  
-      echo 'داده ها به روز رساني شدند';  
+      echo 'Successfully been updated!';  
  }  
  ?> 
